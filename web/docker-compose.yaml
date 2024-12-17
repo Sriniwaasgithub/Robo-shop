@@ -27,7 +27,7 @@ services:
       - catalogue
       - redis
   web:
-    image: web:v1
+    image: web:v2
     container_name: web
     ports:
      - "80:80"
