@@ -1,5 +1,8 @@
-FROM debian:10 AS build
-RUN apt-get update && apt-get -y install maven
+FROM debian:11 AS build
+RUN apt-get update && \
+    apt-get install -y maven && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 WORKDIR /opt/shipping
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
