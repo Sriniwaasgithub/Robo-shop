@@ -29,5 +29,4 @@ services:
       - mongodb
       - redis
       - user
-      - cart
-      - shipping
+      
