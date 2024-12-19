@@ -3,7 +3,7 @@ FROM node:14
 RUN useradd cart
 EXPOSE 8080
 WORKDIR /opt/server
-RUN chown -r cart:cart /opt/server
+RUN chown -R cart:cart /opt/server
 RUN ls -lrt
 COPY package.json /opt/server/
 RUN npm install
