@@ -3,7 +3,7 @@ RUN apk add --no-cache \
     openjdk17 \
     maven \
     bash
-RUN addgroup -r shipping && adduser -r -m -g shipping shipping
+RUN addgroup -S shipping && adduser -S -G shipping shipping
 WORKDIR /opt/shipping
 RUN chown -R shipping:shipping /opt/shipping
 USER shipping
