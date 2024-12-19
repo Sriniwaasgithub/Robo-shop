@@ -5,7 +5,7 @@ RUN apk add --no-cache \
     bash
 RUN addgroup -r shipping && adduser -r -m -g shipping shipping
 WORKDIR /opt/shipping
-RUN chown -R shipping:shipping /opt/server
+RUN chown -R shipping:shipping /opt/shipping
 USER shipping
 COPY pom.xml /opt/shipping/
 RUN mvn dependency:resolve
