@@ -1,6 +1,6 @@
 FROM node:14
 # ENV INSTANA_AUTO_PROFILE true
-useradd cart
+RUN useradd cart
 RUN groupadd -r cart && useradd -r -m -g cart cart
 EXPOSE 8080
 WORKDIR /opt/server
